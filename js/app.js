@@ -1,6 +1,4 @@
-/*
- * Create a list that holds all of your cards
- */
+//Create a list that holds all card symbols
  var cards = ['diamond',
               'diamond',
               'paper-plane-o',
@@ -8,7 +6,7 @@
               'anchor',
               'anchor',
               'bolt',
-              'bolt'
+              'bolt',
               'cube',
               'cube',
               'leaf',
@@ -18,7 +16,8 @@
               'bomb',
               'bomb'
             ];
-var $deck = $(.deck),
+var deck = $('.deck');
+var
 
 /*
  * Display the cards on the page
@@ -27,26 +26,25 @@ var $deck = $(.deck),
  *   - add each card's HTML to the page
  */
 
-// Shuffle function from http://stackoverflow.com/a/2450976
-function shuffle(array) {
-    var currentIndex = array.length, temporaryValue, randomIndex;
+ // Shuffle function from http://stackoverflow.com/a/2450976
+ function shuffle(array) {
+   var currentIndex = array.length,
+     temporaryValue, randomIndex;
 
-    while (currentIndex !== 0) {
-        randomIndex = Math.floor(Math.random() * currentIndex);
-        currentIndex -= 1;
-        temporaryValue = array[currentIndex];
-        array[currentIndex] = array[randomIndex];
-        array[randomIndex] = temporaryValue;
-    }
-
-    return array;
-}
-
-function startGame() {
-  var shuffledCards = shuffle(cards);
+   while (currentIndex !== 0) {
+     randomIndex = Math.floor(Math.random() * currentIndex);
+     currentIndex -= 1;
+     temporaryValue = array[currentIndex];
+     array[currentIndex] = array[randomIndex];
+     array[randomIndex] = temporaryValue;
+   }
+   return array;
+ }
+//function startGame() {
+  //var shuffledCards = shuffleCards(cards);
   $deck.empty();
 };
-startGame();
+//startGame();
 //set up the event listener for a card. If a card is clicked:
 //display the card's symbol (put this functionality in another function that you call from this one)
 //add the card to a *list* of "open" cards (put this functionality in another function that you call from this one)
